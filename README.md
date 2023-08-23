@@ -1,3 +1,10 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Instituto_Federal_do_Piau%C3%AD_-_Marca_Vertical_2015.svg/1200px-Instituto_Federal_do_Piau%C3%AD_-_Marca_Vertical_2015.svg.png" width="30px"/>
+# IFPI
+<a href="https://www.ifpi.edu.br/">
+<img src="https://dia.portalodia.com/media/editor/ifpi1495743190.jpg" width="300px"/>
+</a>
 
-Repositório reservado para armazenar códigos e mini projetos, realizados durante as disciplinas do curso de Análise e Desenvolvimento de Sistemas do Instituto Federal do Piauí.
+# Resumo
+<p>
+  Repositório reservado para armazenar códigos e mini projetos, realizados durante as disciplinas do curso de Análise e 
+  Desenvolvimento de Sistemas do Instituto Federal do Piauí.
+</p>
