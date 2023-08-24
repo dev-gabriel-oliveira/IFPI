@@ -1,51 +1,68 @@
-var Status = {
-    DRAFT: 0,
-    PUBLISHED: 1,
-    DELETED: 2,
-};
-var Post = /** @class */ (function () {
-    function Post(id, text, status) {
+class Status {
+    static DRAFT = 'DRAFT';
+    static PUBLISHED = 'PUBLISHED';
+    static DELETED = 'DELETED';
+}
+
+class Post {
+    constructor(id, text, status) {
         this.setId(id);
         this.setText(text);
         this.setStatus(status);
     }
-    Post.prototype.publish = function () {
+
+    publish() {
         this.validate();
+
         this.setStatus(Status.PUBLISHED);
-        console.log("Publicado com sucesso.");
-    };
-    Post.prototype.validate = function () {
-        if (this.getStatus() === Status.DRAFT && this.getText().trim().length === 0) {
-            throw new Error("O post deve ter pelo menos 1 caractere!");
+        console.log('Successfully published text');
+    }
+
+    validate() {
+        if (this.getStatus() !== Status.DRAFT) {
+            throw new Error('Only drafts can be posted');
         }
-        else {
-            throw new Error("Apenas rascunhos podem ser postados.");
+
+        if (this.getText().trim().length === 0) {
+            throw new Error('A post must have at least one character');
         }
-    };
-    Post.prototype.getText = function () {
+    }
+
+    getText() {
         return this.text;
-    };
-    Post.prototype.setText = function (text) {
+    }
+
+    setText(text) {
         this.text = text;
-    };
-    Post.prototype.getId = function () {
+    }
+
+    getId() {
         return this.id;
-    };
-    Post.prototype.setId = function (id) {
+    }
+
+    setId(id) {
         this.id = id;
-    };
-    Post.prototype.getStatus = function () {
+    }
+
+    getStatus() {
         return this.status;
-    };
-    Post.prototype.setStatus = function (status) {
+    }
+
+    setStatus(status) {
         this.status = status;
-    };
-    return Post;
-}());
-var post = new Post(1, "Hello Word", Status.DRAFT);
-try {
-    post.publish();
+    }
 }
-catch (error) {
-    console.log(error.message);
+
+class RedeSocial {
+    static main() {
+        const post = new Post(1, 'Hello World', Status.DRAFT);
+
+        try {
+            post.publish();
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
 }
+
+RedeSocial.main();
