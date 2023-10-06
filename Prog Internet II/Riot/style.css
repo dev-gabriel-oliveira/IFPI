@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;600;800&display=swap');
+
+html, body{
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+
+    color-scheme: light dark;
+    background-color: #1f1f1f;
+
+    font-family: 'Gabarito', cursive;
+    color: #f9f9f9;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+}
+
+h2{
+    font-size: 4vw;
+    font-weight: 600;
+}
+h3{
+    font-size: 2vw;
+    font-weight: 600;
+}
+h4{
+    margin: 0.5vw 0 1vw 0;
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+
+a{
+    color: #f9f9f9;
+    text-decoration: none;
+    transition: 0.25s;
+}
+a i{
+    font-size: 1.5vw;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    padding: 1vw 2vw;
+
+    border: none;
+    border-radius: 1.5vw;
+
+    cursor: pointer;
+
+    font-family: 'Gabarito', cursive;
+    font-size: 2.4vw;
+}
+
+.card{
+    width: 55%;
+    padding: 1vw 2vw;
+    margin: 1vw 0;
+    
+    background-color: #1f1f1f;
+
+    border: 0.2vw solid rgba(211, 211, 211, 0);
+    border-radius: 0.5vw;
+
+    cursor: pointer;
+}
+.card:hover{
+    border: 0.2vw solid rgba(211, 211, 211, 0.5);
+}
+
+.card-li{
+    display: flex;
+    justify-content: space-between;
+
+    width: 85%;
+}
+
+section.novidades, section.widgets{
+    padding: 6rem 5rem;
+}
+
+/*--- Header ---*/
+header{
+    width: 96%;
+    position: fixed;
+    top: 0;
+
+    padding: 0rem 2%;
+
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.25) 100%);
+
+    font-size: 1vw;
+
+    transition: 0.5s;
+}
+header, header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header a{
+    transition: 0.25s;
+}
+header a:hover{
+    padding: 0.5vw 1vw;
+
+    background: rgba(210, 210, 210, 0.3);
+
+    border-radius: 0.5vw;
+}
+header a.navbar-brand{
+    border-radius: 50%;
+}
+header a.navbar-brand:hover{
+    padding: 0;
+
+    background: red;
+}
+
+header a, header input{
+    margin: 1vw;
+    max-height: 3vw;
+}
+header a img{
+    width: 3vw;
+
+    filter: invert(1);
+}
+header input{
+    padding: 0.8vw 1.6vw;
+
+    border: 1px solid white;
+    border-radius: 1.6vw;
+
+    background: none;
+}
+header input::placeholder{
+    font-family: 'Gabarito', cursive;
+    color: #f9f9f9;
+}
+header a.login{
+    padding: 0.8vw 1.6vw;
+
+    border-radius: 1.6vw;
+
+    background-color: rgb(209, 54, 57);
+    color: #111;
+}
+
+/*--- Secção Topo ---*/
+section.topo{
+    padding: 8rem 5rem;
+
+    background-image: url('./public/song_of_nunu.png');
+    background-position: center;
+    background-size: cover;
+
+    font-size: 1.5vw;
+}
+section.topo div{
+    max-width: 45%;
+
+    text-align: center;
+}
+section.topo div img{
+    width: 28vw;
+}
+section.topo div button{
+    background: linear-gradient(315deg,#0bc4e2 0,#2c8cc2 100%);
+
+    font-weight: 600;
+
+    box-shadow: 0 10px 45px -10px rgba(11,196,226, 0),
+                0 0 20px -10px rgba(11,196,226, 0),
+                0 10px 30px -10px rgba(11,196,226, 0);
+
+    transition: 0.25s;
+}
+section.topo div button:hover{
+    filter: brightness(115%);
+
+    box-shadow: 0 10px 45px -10px rgba(11,196,226,.15),
+                0 0 20px -10px rgba(11,196,226,.35),
+                0 10px 30px -10px rgba(11,196,226,.25);
+}
+
+/*--- Secção Novidades ---*/
+section.novidades{
+    background: linear-gradient(285deg, rgba(0,0,0,1) 50%, rgba(19,53,61,1) 100%);
+}
+section.novidades .flex h2{
+    margin-top: 0;
+}
+section.novidades .flex a.ver-tudo{
+    padding: 0.5vw 1vw;
+
+    background: rgba(210, 210, 210, 0.1);
+
+    border-radius: 0.5vw;
+
+    transition: 0.25s;
+}
+section.novidades .flex a.ver-tudo:hover{
+    background: rgba(210, 210, 210, 0.2);
+}
+section.novidades .flex #card-main{
+    padding-top: 15vw;
+
+    background-image: url('./public/card-main.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/*--- Widgets Cards ---*/
+.widgets .card{
+    max-width: 15vw;
+    padding: 8vw 12vw;
+
+    justify-content: center;
+
+    background-position: center;
+    background-size: cover;
+}
+/*--- Secção Jogos ---*/
+.jogos .card#league-of-legends{
+    background-image: url('./public/league-of-legends.jpg');
+}
+.jogos .card#valorant{
+    background-image: url('./public/valorant.jpg');
+}
+.jogos .card#teamfight-tactics{
+    background-image: url('./public/team-fight.jpg');
+}
+.jogos .card#wild-rift{
+    background-image: url('./public/wild-rift.jpg');
+}
+.jogos .card#legends-of-runeterra{
+    background-image: url('./public/legends-of-runeterra.jpg');
+}
+
+/*--- Secção Esports ---*/
+.esports .card#lol-esports{
+    background-image: url('./public/lol-esports.jpg');
+}
+.esports .card#valorant-champions{
+    background-image: url('./public/valorant-champions.jpg');
+}
+
+/*--- Secção Entretenimento ---*/
+.entretenimento .card#arcane{
+    background-image: url('./public/arcane.jpeg');
+}
+.entretenimento .card#riot-music{
+    background-image: url('./public/riot-music.png');
+}
+
+/*--- Secção Forja ---*/
+.forja .card#hextech{
+    background-image: url('./public/hextech-mayhem.jpg');
+}
+.forja .card#song-of-nunu{
+    background-image: url('./public/song-of-nunu.png');
+}
+
+/*--- Secção Contratando ---*/
+section.contratando{
+    padding: 6rem 0 6rem 5rem;
+
+    background-color: #f9f9f9;
+}
+section.contratando h2, section.contratando h4, section.contratando p{
+    color: black;
+}
+section.contratando .flex .grid button{
+    background-color: rgb(209, 54, 57);
+}
+section.contratando .flex .grid a{
+    max-width: 35%;
+    background-color: lightgray;
+}
+section.contratando .flex a:hover, section.contratando .flex button:hover{
+    filter: brightness(90%);
+}
+section.contratando .flex a h2, section.contratando .flex a h4{
+    margin: 0;
+}
+section.contratando .flex .grid{
+    max-width: 45%;
+}
+section.contratando .flex img{
+    max-width: 55%;
+}
+section.contratando .flex img{
+    -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+	clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
