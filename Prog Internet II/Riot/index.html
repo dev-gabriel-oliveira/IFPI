@@ -31,7 +31,7 @@
             <div>
                 <img src="./public/song_of_nunu_logo.png" alt="">
                 <h2>Desenvolvido pela Tequila Works</h2>
-                <p>
+                <p id="topo-comment">
                     Mergulhe de cabeça em uma narrativa imersiva ambientada nas regiões inexploradas de Freljord, 
                     onde cada passo na neve deixa você mais perto da verdade sobre o passado de Nunu e Willump.
                 </p>
@@ -41,7 +41,7 @@
 
         <section class="novidades">
             <div class="flex">
-                <h2>Novidades</h2> <a class="ver-tudo" href="">VER TUDO</a>
+                <h2 class="title">Novidades</h2> <a class="ver-tudo" href="">VER TUDO</a>
             </div>
 
             <div class="flex">
@@ -75,7 +75,7 @@
 
         <section class="widgets">
             <div class="jogos">
-                <h2>Nossos Jogos</h2>
+                <h2 class="title">Nossos Jogos</h2>
 
                 <div class="flex">
                     <a class="card" id="league-of-legends"></a>
@@ -87,7 +87,7 @@
             </div>
     
             <div class="esports">
-                <h2>Esports</h2>
+                <h2 class="title">Esports</h2>
 
                 <div class="flex">
                     <a class="card" id="lol-esports"></a>
@@ -96,7 +96,7 @@
             </div>
     
             <div class="entretenimento">
-                <h2>Entretenimento</h2>
+                <h2 class="title">Entretenimento</h2>
 
                 <div class="flex">
                     <a class="card" id="arcane"></a>
@@ -105,7 +105,7 @@
             </div>
     
             <div class="forja">
-                <h2>Riot Forge</h2>
+                <h2 class="title">Riot Forge</h2>
 
                 <div class="flex">
                     <a class="card" id="hextech"></a>
@@ -117,7 +117,7 @@
         <section class="contratando">
             <div class="flex">
                 <div class="grid">
-                    <h2>Estamos contratando!</h2>
+                    <h2 class="title">Estamos contratando!</h2>
                     <h4>Junte-se à Riot para trilhar seu próprio caminho e criar experiências inesquecíveis para a comunidade</h4>
 
                     <div class="flex">
@@ -131,7 +131,9 @@
                         </a>
                     </div>
 
-                    <button>Explorar Carreiras</button>
+                    <div>
+                        <button>Explorar Carreiras</button>
+                    </div>
                 </div>
 
                 <img src="./public/contratando.jpg" alt="">
@@ -140,20 +142,44 @@
     </main>
 
     <footer>
-        <div>
-            <a href="">Riot icon</a>
-            <a href="">Item</a>
-            <a href="">Item</a>
-            <a href="">Item</a>
-            <a href="">Item</a>
-            <a href="">Item</a>
+        <div class="flex">
+            <a href="">
+                <img src="./public/riot_icon.png" alt="">
+            </a>
+            <a href="">
+                <strong>IMPRENSA</strong>
+            </a>
+            <a href="">
+                <strong>SEGURANÇA</strong>
+            </a>
+            <a href="">
+                <strong>JURÍDICO</strong>
+            </a>
+            <a href="">
+                <strong>TERMOS DE SERVIÇO</strong>
+            </a>
+            <a href="">
+                <strong>POLÍTICA DE PRIVACIDADE</strong>
+            </a>
+            <a href="">
+                <strong>SUPORTE</strong>
+            </a>
         </div>
 
         <hr>
 
-        <a href="">Preferências de Cookies</a>
-        <p>© 2023 Riot Games, Inc. Todos os direitos reservados.</p>
-        <a href="">Voltar ao Topo</a>
+        <div class="flex">
+            <p>
+                <a href="">
+                    <strong>Preferências de Cookies</strong>
+                </a>
+                <strong> | © 2023 Riot Games, Inc. Todos os direitos reservados.</strong>
+            </p>
+            <a href="">
+                <strong>Voltar ao Topo <i class="bi bi-caret-up-fill"></i></strong>
+            </a>
+        </div>
+        
     </footer>
 
     <script src="script.js"></script>

@@ -10,6 +10,7 @@ html, body{
     background-color: #1f1f1f;
 
     font-family: 'Gabarito', cursive;
+    font-size: 100%;
     color: #f9f9f9;
 }
 
@@ -19,23 +20,75 @@ html, body{
     justify-content: space-between;
     align-items: center;
 }
-
 .grid{
     display: grid;
 }
+@media (max-width:812px) {
+    .flex{
+        justify-content: center;
+    }
+}
 
 h2{
-    font-size: 4vw;
-    font-weight: 600;
-}
-h3{
     font-size: 2vw;
     font-weight: 600;
 }
 h4{
-    margin: 0.5vw 0 1vw 0;
     font-size: 1.5vw;
-    font-weight: 600;
+    margin: 0.5vw 0 1vw 0;
+}
+strong{
+    font-size: 1.2vw;
+    color: gray;
+}
+.title{
+    font-size: 3vw;
+}
+p{
+    font-size: 1.2vw;
+}
+@media (max-width:1068px) {
+    h2{
+        font-size: 3vw;
+        font-weight: 600;
+    }
+    h4{
+        font-size: 2vw;
+        margin: 0.5vw 0 1vw 0;
+    }
+    strong{
+        font-size: 1.6vw;
+        color: gray;
+    }
+    .title{
+        font-size: 4vw;
+    }
+    p{
+        font-size: 1.6vw;
+    }
+}
+@media (max-width:760px) {
+    h2{
+        font-size: 4vw;
+        font-weight: 600;
+    }
+    h4{
+        font-size: 2.5vw;
+        margin: 0.5vw 0 1vw 0;
+    }
+    strong{
+        font-size: 2vw;
+        color: gray;
+    }
+    .title{
+        font-size: 4.5vw;
+    }
+    p{
+        font-size: 2vw;
+    }
+    header a{
+        font-size: 1.5vw;
+    }
 }
 
 a{
@@ -63,6 +116,8 @@ button{
 
     font-family: 'Gabarito', cursive;
     font-size: 2.4vw;
+
+    transition: 0.25s;
 }
 
 .card{
@@ -92,11 +147,22 @@ section.novidades, section.widgets{
     padding: 6rem 5rem;
 }
 
+@media (max-width:812px) {
+    section.novidades, section.widgets{
+        padding: 3.5rem;
+    }
+    section.widgets .card, .card{
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
 /*--- Header ---*/
 header{
     width: 96%;
     position: fixed;
     top: 0;
+    z-index: 1;
 
     padding: 0rem 2%;
 
@@ -197,6 +263,15 @@ section.topo div button:hover{
                 0 10px 30px -10px rgba(11,196,226,.25);
 }
 
+@media (max-width:960px) {
+    section.topo div{
+        max-width: 100%;
+    }
+    section.topo div p#topo-comment{
+        display: none;
+    }
+}
+
 /*--- Secção Novidades ---*/
 section.novidades{
     background: linear-gradient(285deg, rgba(0,0,0,1) 50%, rgba(19,53,61,1) 100%);
@@ -223,6 +298,23 @@ section.novidades .flex #card-main{
     background-position: center;
     background-size: cover;
 }
+
+@media (max-width:1070px) {
+    section.novidades .flex #card-main{
+        width: 100%;
+    }
+    section.novidades .flex ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media (max-width:812px) {
+    section.novidades .flex #card-main{
+        padding-top: 0;
+    }
+}
+
 
 /*--- Widgets Cards ---*/
 .widgets .card{
@@ -277,12 +369,19 @@ section.novidades .flex #card-main{
 
 /*--- Secção Contratando ---*/
 section.contratando{
-    padding: 6rem 0 6rem 5rem;
+    padding: 0;
 
     background-color: #f9f9f9;
 }
 section.contratando h2, section.contratando h4, section.contratando p{
+    margin-top: 0;
     color: black;
+}
+section.contratando .flex .grid{
+    max-width: 30%;
+    padding: 0 5rem;
+
+    text-align: center;
 }
 section.contratando .flex .grid button{
     background-color: rgb(209, 54, 57);
@@ -297,13 +396,57 @@ section.contratando .flex a:hover, section.contratando .flex button:hover{
 section.contratando .flex a h2, section.contratando .flex a h4{
     margin: 0;
 }
-section.contratando .flex .grid{
-    max-width: 45%;
-}
 section.contratando .flex img{
-    max-width: 55%;
+    max-inline-size: 55%;
+    object-fit: cover;
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0% 50%);
 }
-section.contratando .flex img{
-    -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-	clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+
+@media (max-width:1068px) {
+    section.contratando .flex{
+        justify-content: center;
+    }
+    section.contratando .flex .grid{
+        max-width: 100%;
+        padding: 5vw 20vw;
+    }
+    section.contratando .flex img{
+        display: none;
+    }
+}
+@media (max-width:760px) {
+    section.contratando .flex .grid{
+        padding: 5vw;
+    }
+}
+
+
+
+/*--- Footer ---*/
+footer{
+    padding: 5rem 2rem;
+}
+footer img{
+    filter: invert(1) opacity(40%);
+    transition: 0.25s;
+}
+footer img:hover{
+    filter: invert(1) opacity(80%);
+}
+footer a strong{
+    transition: 0.25s;
+}
+footer a strong:hover{
+    color: #f9f9f9;
+
+    border-bottom: 1px solid #f9f9f9;
+}
+
+@media (max-width:760px) {
+    footer{
+        padding: 1rem;
+    }
+    footer .flex{
+        flex-wrap: wrap;
+    }
 }

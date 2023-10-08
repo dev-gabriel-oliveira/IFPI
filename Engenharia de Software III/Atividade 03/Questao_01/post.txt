@@ -1,0 +1,5 @@
+ID: 1
+Texto: Lorem ipsum dolor sit amet.
+Autor: Gabriel Oliver
+Data: Sun Oct 08 2023 09:42:52 GMT-0300 (Horário Padrão de Brasília)
+Quantidade de Likes: 0
