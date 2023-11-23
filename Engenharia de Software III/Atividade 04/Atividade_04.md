@@ -1,10 +1,12 @@
-#INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO PIAUÍ
-#Aluno: Gabriel Oliveira Rodrigues
-#Curso: ADS
-#Disciplina: Engenharia de Software III
-#Professor: Ely
+### INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO PIAUÍ
+#### Aluno: Gabriel Oliveira Rodrigues
+#### Curso: ADS
+#### Disciplina: Engenharia de Software III
+#### Professor: Ely
 
-Atividade 04
+<hr />
+
+## Atividade 04
 
 ### 1. Por que o uso do nome próprio Liskov?
 O nome é de Barbara Liskov, uma renomada cientista da computação, que formulou este princípio em 1987. Barbara Liskov é conhecida por suas contribuições significativas para a área de ciência da computação, incluindo o desenvolvimento de linguagens de programação e sistemas distribuídos.
