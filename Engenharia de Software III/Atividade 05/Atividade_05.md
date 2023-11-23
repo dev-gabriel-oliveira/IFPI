@@ -10,6 +10,7 @@
 
 ### Questão 1.
 A herança entre "ContaBancaria" e "ContaPoupanca" é problemática, isso porque a classe ContaPoupanca adiciona uma restrição específica para saques maiores que 1000. O princípio da substituição de Liskov afirma que objetos de uma classe derivada devem poder substituir objetos da classe base sem afetar a corretude do programa. A restrição de saque na classe derivada viola esse princípio.
+
 <a href="Questao_01.ts">Possível Solução</a>
 
 ### Questão 2.
